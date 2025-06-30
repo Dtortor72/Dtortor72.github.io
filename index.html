@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MicroControl Academy - Curso Arduino</title>
+    <title>MicroControladoresLanzarote - Curso Arduino</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2965/2965300.png" type="image/x-icon">
     <style>
@@ -26,7 +26,7 @@
             background-color: #f9f9f9;
             color: #333;
             line-height: 1.6;
-            padding-top: 60px; /* Ajuste para cabecera fija */
+            padding-top: 60px;
         }
         
         /* ---- CABECERA OPTIMIZADA ---- */
@@ -232,6 +232,28 @@
             font-size: 2.5rem;
             color: var(--secondary);
             margin-bottom: 1.5rem;
+        }
+        
+        /* ---- LISTA DE REQUISITOS ---- */
+        .requirements-list {
+            list-style-type: none;
+            margin: 1.5rem 0;
+            text-align: left;
+        }
+        
+        .requirements-list li {
+            margin-bottom: 0.8rem;
+            position: relative;
+            padding-left: 1.8rem;
+        }
+        
+        .requirements-list li:before {
+            content: "•";
+            color: var(--accent);
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -3px;
         }
         
         /* ---- KIT SECTION ---- */
@@ -454,7 +476,7 @@
             <div class="header-content">
                 <div class="logo">
                     <img src="https://cdn-icons-png.flaticon.com/512/2965/2965300.png" alt="Logo MicroControl">
-                    <h1>MicroControl<span>Academy</span></h1>
+                    <h1>MicroControladoresLanzarote<span>Curso</span></h1>
                 </div>
                 <nav>
                     <ul>
@@ -475,7 +497,7 @@
         <div class="container">
             <div class="hero-content">
                 <h2>Curso Gratuito de Arduino UNO</h2>
-                <p>Aprende electrónica práctica con <strong>Amado Tortosa Furió</strong>. Solo 15 plazas disponibles. Requiere compra del <a href="https://es.aliexpress.com/item/1005006581659552.html" style="color: white; text-decoration: underline;" target="_blank">Kit Elegoo</a>.</p>
+                <p>Aprende electrónica práctica con <strong>Daniel Torrens</strong>. Solo 15 plazas disponibles. Requiere compra del <a href="https://es.aliexpress.com/item/1005006581659552.html" style="color: white; text-decoration: underline;" target="_blank">Kit Elegoo</a>.</p>
                 <div>
                     <a href="#contacto" class="btn">¡Quiero Apuntarme!</a>
                     <a href="#kit" class="btn btn-outline">Ver Kit Requerido</a>
@@ -495,7 +517,18 @@
                         <i class="fas fa-user-tie"></i>
                     </div>
                     <h3>Instructor</h3>
-                    <p><strong>Amado Tortosa Furió</strong><br>Ingeniero electrónico con 10 años de experiencia en formación en microcontroladores.</p>
+                    <p><strong>Daniel Torrens</strong><br>Técnico electrónico con muchos años de experiencia en microcontroladores, y electrónica.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3>Material Obligatorio</h3>
+                    <ul class="requirements-list">
+                        <li><a href="https://es.aliexpress.com/item/1005006581659552.html" target="_blank">Kit Elegoo UNO R3</a></li>
+                        <li>Ordenador (Windows/macOS/Linux)</li>
+                        <li>Conexión a Internet estable</li>
+                    </ul>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
@@ -503,13 +536,6 @@
                     </div>
                     <h3>Plazas Limitadas</h3>
                     <p>Solo <strong>15 estudiantes</strong> por curso para garantizar atención personalizada.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-box-open"></i>
-                    </div>
-                    <h3>Material Obligatorio</h3>
-                    <p>Debes adquirir el <a href="https://es.aliexpress.com/item/1005006581659552.html" target="_blank" style="color: var(--accent);">Kit Elegoo UNO R3</a> para seguir las prácticas.</p>
                 </div>
             </div>
         </div>
@@ -519,18 +545,16 @@
         <div class="container">
             <div class="section-title">
                 <h2>Material Requerido</h2>
-                <p>Compra obligatoria para participar en el curso</p>
+                <p>Compra necesaria para participar en el curso</p>
             </div>
             <div class="kit-content">
                 <img src="https://ae01.alicdn.com/kf/S1a5d8f1a9b0a4e2d9c9d4a7b9c4d4a7b.jpg" alt="Kit Elegoo">
                 <div>
-                    <h3>Kit Elegoo UNO R3 Super Starter</h3>
-                    <p>Incluye todo lo necesario para el curso:</p>
-                    <ul style="list-style-type: none; margin: 1rem 0;">
-                        <li>✔ Placa Arduino UNO R3</li>
-                        <li>✔ Componentes electrónicos (sensores, LEDs, resistencias)</li>
-                        <li>✔ Protoboard y cables</li>
-                        <li>✔ Módulos adicionales</li>
+                    <h3>Requisitos técnicos completos</h3>
+                    <ul class="requirements-list">
+                        <li><strong>Hardware:</strong> Kit Elegoo UNO R3 + ordenador con 4GB RAM mínimo</li>
+                        <li><strong>Software:</strong> IDE Arduino (gratuito)</li>
+                        <li><strong>Conexión:</strong> Internet para clases y descargas</li>
                     </ul>
                     <a href="https://es.aliexpress.com/item/1005006581659552.html" class="btn" target="_blank">Comprar Kit (€44.35)</a>
                     <p class="note">* Precio aproximado - puede variar según promociones</p>
@@ -546,7 +570,7 @@
                 <p>Solo 15 plazas disponibles - Curso 100% gratuito</p>
             </div>
             
-            <form action="https://formsubmit.co/tucorreo@gmail.com" method="POST">
+            <form action="https://formsubmit.co/dajototo@telefonica.net" method="POST">
                 <input type="hidden" name="_subject" value="Nueva inscripción curso Arduino">
                 <input type="hidden" name="_template" value="table">
                 <input type="hidden" name="_next" value="https://tudominio.com/gracias.html">
@@ -557,8 +581,13 @@
                 <textarea name="Mensaje" placeholder="¿Por qué quieres participar en este curso?"></textarea>
                 
                 <div class="terms">
-                    <input type="checkbox" id="terms" name="terms" required>
-                    <label for="terms">Confirmo que compraré el <a href="https://es.aliexpress.com/item/1005006581659552.html" target="_blank">Kit Elegoo</a> para seguir el curso</label>
+                    <input type="checkbox" id="kit" name="kit" required>
+                    <label for="kit">Confirmo que compraré el <a href="https://es.aliexpress.com/item/1005006581659552.html" target="_blank">Kit Elegoo</a></label>
+                </div>
+                
+                <div class="terms">
+                    <input type="checkbox" id="requirements" required>
+                    <label for="requirements">Confirmo que tengo ordenador e Internet para seguir el curso</label>
                 </div>
                 
                 <button type="submit" class="btn">Enviar solicitud</button>
@@ -566,7 +595,7 @@
         </div>
     </section>
 
-    <a href="https://wa.me/34612345678?text=Hola,%20quiero%20información%20sobre%20el%20curso%20de%20Arduino" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/+34622604504?text=Hola,%20quiero%20información%20sobre%20el%20curso%20de%20Arduino" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -574,7 +603,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>MicroControl Academy</h3>
+                    <h3>MicroControladoresLanzarote</h3>
                     <p>Cursos prácticos de electrónica y programación con microcontroladores.</p>
                     <div class="footer-social">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -584,13 +613,13 @@
                 </div>
                 <div class="footer-column">
                     <h3>Contacto</h3>
-                    <p><i class="fas fa-user"></i> Amado Tortosa Furió</p>
-                    <p><i class="fas fa-envelope"></i> info@microcontrolacademy.com</p>
-                    <p><i class="fas fa-phone"></i> +34 612 345 678</p>
+                    <p><i class="fas fa-user"></i> Daniel Torrens</p>
+                    <p><i class="fas fa-envelope"></i> dajototo@telefonica.net</p>
+                    <p><i class="fas fa-phone"></i> +34 622 604 504</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 MicroControl Academy. Todos los derechos reservados.</p>
+                <p>&copy; 2023 MicroControladoresLanzarote. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
@@ -604,7 +633,7 @@
             if(currentStudents >= maxStudents) {
                 e.preventDefault();
                 alert('¡Plazas agotadas! Solo 15 participantes. Contáctanos para lista de espera.');
-                window.location.href = 'https://wa.me/34612345678?text=Hola,%20quiero%20estar%20en%20lista%20de%20espera%20para%20el%20curso%20de%20Arduino';
+                window.location.href = 'https://wa.me/+34 622 604 504?text=Hola,%20quiero%20estar%20en%20lista%20de%20espera%20para%20el%20curso%20de%20Arduino';
             }
         });
 
