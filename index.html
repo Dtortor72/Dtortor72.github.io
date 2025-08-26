@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Robótica con Arduino</title>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 20px 0;
+            background: linear-gradient(135deg, #009688 0%, #00796B 100%);
+            color: white;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.4rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+        
+        /* Banner promocional */
+        .promo-banner {
+            background: linear-gradient(to right, #FF5722, #FF9800);
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0;
+            color: white;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+        }
+        
+        .promo-content {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+        }
+        
+        .promo-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        
+        .promo-image svg {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .promo-title {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        }
+        
+        .promo-text {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+        
+        .plazas-info {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            display: inline-block;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: #fff;
+            color: #FF5722;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+        }
+        
+        .whatsapp-button {
+            display: inline-flex;
+            align-items: center;
+            background-color: #25D366;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            margin: 5px;
+        }
+        
+        .whatsapp-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+            background-color: #128C7E;
+        }
+        
+        /* Características */
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .feature {
+            flex: 1;
+            min-width: 250px;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #009688;
+        }
+        
+        .feature-title {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: #00796B;
+        }
+        
+        /* Información del curso */
+        .course-info {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 40px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .info-title {
+            font-size: 1.8rem;
+            color: #00796B;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .info-item {
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 8px;
+        }
+        
+        .info-item h4 {
+            color: #FF5722;
+            margin-bottom: 10px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            background: #00796B;
+            color: white;
+            border-radius: 8px;
+        }
+        
+        .download-section {
+            background: #f8f8f8;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .download-title {
+            color: #00796B;
+            margin-bottom: 15px;
+        }
+        
+        .download-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .promo-banner {
+                flex-direction: column;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .promo-title {
+                font-size: 1.8rem;
+            }
+            
+            .download-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        
+        /* Estilos para impresión */
+        @media print {
+            body {
+                background: white;
+            }
+            
+            .container {
+                width: 100%;
+                max-width: 100%;
+                padding: 0;
+            }
+            
+            .promo-banner {
+                break-inside: avoid;
+                box-shadow: none;
+                border: 2px solid #FF5722;
+            }
+            
+            .feature {
+                break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+            
+            .course-info {
+                break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+            
+            .cta-button, .download-section, .whatsapp-button {
+                display: none;
+            }
+            
+            footer {
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="page-to-capture">
+        <header>
+            <h1>Curso de Robótica con Arduino</h1>
+            <p class="subtitle">Aprende electrónica y programación de forma práctica</p>
+        </header>
+        
+        <!-- Sección de descarga -->
+        <section class="download-section">
+            <h3 class="download-title">¿Cómo descargar esta página para imprimir?</h3>
+            <div class="download-buttons">
+                <button class="cta-button" onclick="captureScreenshot()">Descargar como imagen</button>
+                <button class="cta-button" onclick="window.print()">Imprimir directamente</button>
+            </div>
+            <p style="margin-top: 15px;">Recomendación: Para mejor calidad, usa la opción de descargar como imagen</p>
+        </section>
+        
+        <!-- Banner promocional -->
+        <section class="promo-banner">
+            <div class="promo-content">
+                <h2 class="promo-title">¡Descubre el mundo de la robótica con Arduino!</h2>
+                <p class="promo-text">Aprende a programar y crear tus propios proyectos de robótica y domótica. No se necesitan conocimientos previos.</p>
+                
+                <div class="plazas-info">
+                    <strong>Plazas limitadas (15) - Hay lista de reserva</strong>
+                </div>
+                
+                <br>
+                <a href="#form" class="cta-button">¡Inscríbete ahora!</a>
+            </div>
+            <div class="promo-image">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400">
+                    <!-- Fondo de tarjeta Arduino -->
+                    <rect x="50" y="50" width="400" height="300" rx="10" fill="#009679"/>
+                    <rect x="70" y="80" width="360" height="240" fill="#004037" rx="5"/>
+                    
+                    <!-- Conectores y componentes -->
+                    <rect x="100" y="110" width="60" height="30" fill="#00C8B4"/>
+                    <rect x="180" y="110" width="60" height="30" fill="#00C8B4"/>
+                    <rect x="260" y="110" width="60" height="30" fill="#00C8B4"/>
+                    <rect x="340" y="110" width="60" height="30" fill="#00C8B4"/>
+                    
+                    <!-- Microchip central -->
+                    <rect x="180" y="170" width="140" height="80" fill="#00FFE5"/>
+                    <rect x="200" y="190" width="100" height="40" fill="#004037"/>
+                    
+                    <!-- Pines -->
+                    <rect x="80" y="200" width="15" height="120" fill="#E0E0E0"/>
+                    <rect x="405" y="200" width="15" height="120" fill="#E0E0E0"/>
+                    
+                    <!-- Texto Arduino -->
+                    <text x="250" y="280" text-anchor="middle" fill="#00FFE5" font-family="Arial" font-size="24" font-weight="bold">ARDUINO</text>
+                    
+                    <!-- Iconos de proyectos -->
+                    <circle cx="120" cy="270" r="20" fill="#FF5722"/>
+                    <circle cx="200" cy="270" r="20" fill="#FF9800"/>
+                    <circle cx="280" cy="270" r="20" fill="#00BCD4"/>
+                    <circle cx="360" cy="270" r="20" fill="#4CAF50"/>
+                    
+                    <!-- Luz de LED -->
+                    <circle cx="120" cy="270" r="10" fill="#FFF" opacity="0.8">
+                        <animate attributeName="opacity" values="0.8;0.2;0.8" dur="2s" repeatCount="indefinite"/>
+                    </circle>
+                </svg>
+            </div>
+        </section>
+        
+        <!-- Características del curso -->
+        <section class="features">
+            <div class="feature">
+                <div class="feature-icon">🔌</div>
+                <h3 class="feature-title">Material necesario</h3>
+                <p>Los estudiantes deberán adquirir su propio kit de Arduino para realizar los proyectos prácticos.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">👨‍🏫</div>
+                <h3 class="feature-title">Maker especializado</h3>
+                <p>Aprende con un maker con años de experiencia en electrónica y microcontroladores.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🚀</div>
+                <h3 class="feature-title">Proyectos prácticos</h3>
+                <p>Desarrolla habilidades reales con proyectos que podrás llevar a cabo desde el primer día.</p>
+            </div>
+        </section>
+        
+        <!-- Información del curso -->
+        <section class="course-info">
+            <h3 class="info-title">¿Qué aprenderás en este curso?</h3>
+            <div class="info-grid">
+                <div class="info-item">
+                    <h4>Fundamentos de electrónica</h4>
+                    <p>Conceptos básicos de circuitos, resistencias, sensores y actuadores.</p>
+                </div>
+                <div class="info-item">
+                    <h4>Programación con Arduino</h4>
+                    <p>Aprenderás el lenguaje de programación para crear tus primeros sketches.</p>
+                </div>
+                <div class="info-item">
+                    <h4>Proyectos prácticos</h4>
+                    <p>Desarrollarás proyectos reales como semáforos, robots sencillos y sistemas de riego automático.</p>
+                </div>
+                <div class="info-item">
+                    <h4>Robótica aplicada</h4>
+                    <p>Introducción a la robótica con ejercicios prácticos y desafíos creativos.</p>
+                </div>
+            </div>
+        </section>
+        
+        <footer>
+            <p>© 2023 Curso de Robótica con Arduino - Todos los derechos reservados</p>
+            <p>Contacto: 
+                <a href="https://wa.me/34600000000" class="whatsapp-button" target="_blank">
+                    📱 Contactar por WhatsApp
+                </a>
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        function captureScreenshot() {
+            // Ocultar temporalmente la sección de descarga para que no aparezca en la imagen
+            const downloadSection = document.querySelector('.download-section');
+            if (downloadSection) {
+                downloadSection.style.display = 'none';
+            }
+            
+            html2canvas(document.getElementById('page-to-capture')).then(function(canvas) {
+                // Mostrar nuevamente la sección de descarga
+                if (downloadSection) {
+                    downloadSection.style.display = 'block';
+                }
+                
+                // Crear un enlace para descargar la imagen
+                const link = document.createElement('a');
+                link.download = 'curso-robotica-arduino.png';
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+            });
+        }
+        
+        // Reemplazar con tu número real de WhatsApp (en formato internacional sin +)
+        document.querySelector('.whatsapp-button').href = "https://wa.me/34600000000";
+    </script>
+</body>
+</html>
